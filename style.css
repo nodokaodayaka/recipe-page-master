@@ -1,0 +1,347 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+ */
+:root {
+  --gray2: #4f4f4f;
+  --gray3: #828282;
+  --gray4: #bdbdbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 969px;
+  margin: 50px auto 0;
+}
+
+.header__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 63.98px;
+}
+
+.header__subtitle {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 17.07px;
+  color: var(--gray2);
+  padding: 12px 0 0 30px;
+  max-width: 622px;
+}
+
+.header__subtitle::before {
+  position: absolute;
+  content: url(./asset/6dots.svg);
+  top: 12px;
+  left: 0;
+}
+
+.header__banner {
+  margin: 0 auto;
+  padding-top: 26px;
+}
+
+.header__banner__image {
+  width: 100%;
+}
+
+.contents {
+  max-width: 969px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contents__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 31.99px;
+  margin-bottom: 32px;
+}
+
+.contents__subtitle {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.8rem;
+  line-height: 23.93px;
+  margin-bottom: 32px;
+}
+
+.contents__items {
+  margin-bottom: 30px;
+}
+
+.contents__item > input[type="checkbox"] {
+  display: none;
+}
+
+.contents__item
+  > input[type="checkbox"]:checked
+  + label
+  > .contents__item__description::before {
+  position: absolute;
+  content: "\2713";
+  text-align: center;
+  vertical-align: center;
+  color: var(--gra4);
+  /* background-color: black; */
+}
+
+.contents__item__description {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 25px;
+  max-width: 554px;
+  padding-left: 40px;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+.contents__item__description::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 4px;
+  border: 1px solid var(--gray3);
+}
+
+.contents__item__description span.strong {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+
+.ingredients__description {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 19.5px;
+  padding-left: 50px;
+  max-width: 554px;
+}
+
+.ingredients__description span.strong {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+
+.numbering {
+  counter-reset: number;
+}
+
+.numbering .ingredients__description::before {
+  counter-increment: number;
+  position: absolute;
+  content: counter(number);
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 31.99px;
+  color: white;
+  background-color: orange;
+  border-radius: 6px;
+}
+
+.ingredients__no {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 31.99px;
+  color: white;
+}
+
+.ingredients__item {
+  margin-bottom: 30px;
+}
+
+.contents__left {
+  order: 1;
+}
+
+.contents__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  order: 2;
+  height: 367px;
+  width: 216px;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+}
+
+.receipe__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.receipe__grp {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.restaurant_menu {
+  color: orange;
+}
+
+.receipe__icon {
+  margin-right: 14px;
+}
+
+.receipe__icon .access_time,
+.receipe__icon .restaurant_menu {
+  font-size: 2.7rem;
+}
+
+.receipe__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 12.19px;
+  color: var(--gray4);
+  text-transform: uppercase;
+}
+
+.receipe__description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 17.07px;
+}
+
+.receipe__info:nth-child(1) .receipe__description {
+  color: orange;
+}
+
+.quote {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray4);
+}
+
+footer {
+  margin-top: 108px;
+  margin-bottom: 17px;
+}
+footer p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a9a9a9;
+  text-align: center;
+}
+
+@media screen and (max-width:1000px) {
+  .header {
+    max-width: 969px;
+    margin: 50px 11px;
+  }
+
+  .contents {
+    margin: 50px 11px;
+  }
+}
+
+@media screen and (max-width:622px) {
+  .header__title {
+    font-size: 2.4rem;
+    line-height: 31.99px;
+  }
+
+  .header__subtitle {
+    font-size: 1.2rem;
+    line-height: 14.63px;
+  }
+
+  .header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contents__left {
+    order: 2;
+  }
+
+  .contents__right {
+    order: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 10px;
+    box-shadow: none;
+  }
+
+  .receipe__info:nth-child(2) {
+    margin-left: 40px;
+  }
+
+  .receipe__info:nth-child(3) {
+    margin-left: 40px;
+  }
+
+  .receipe__grp {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 25px;
+  }
+}
